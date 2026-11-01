@@ -14,7 +14,14 @@ header{background:#fff;border-bottom:1px solid var(--line)}.container.nav{width:
 footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:13px;background:white} nav .doc-link{font-size:12px;color:#2c7188;background:#edf5f7;padding:5px 9px;border:1px solid #dcebed;border-radius:5px;white-space:nowrap}.pub-tag{font-size:11px;color:#267188;background:#e9f5f6;padding:3px 7px;border-radius:4px;margin-left:6px}@media(max-width:1020px){.nav{align-items:flex-start;flex-direction:column;gap:11px}nav{gap:12px 19px;flex-wrap:wrap}}@media(max-width:780px){.main{grid-template-columns:1fr;gap:0}.hero{padding:44px 0}.container{width:min(100% - 36px,1080px)}.container.nav{width:calc(100% - 36px)}section{margin-bottom:36px}}
 @media print{header, .actions,aside,footer{display:none}.main{display:block}.hero{background:white;color:black;padding:0}.hero h1,.hero p,.eyebrow,.subtitle{color:black}.container{width:100%}section{break-inside:avoid}}
 .coursework-details summary{cursor:pointer;color:#19647b;font-size:13px;font-weight:650;padding:5px 0}.coursework-details summary:focus-visible{outline:2px solid var(--sea);outline-offset:3px}.coursework-details ul{padding-left:16px;margin:10px 0}.coursework-details li{font-size:12px;line-height:1.5;margin-bottom:7px}
-.main > div:first-child section p:not(.meta){text-align:justify;text-align-last:left}</style>
+.main > div:first-child section p:not(.meta){text-align:justify;text-align-last:left}
+/* Compact, consistent degree entries in the Education sidebar */
+#education .education-entry + .education-entry{border-top:1px solid var(--line);padding-top:14px;margin-top:14px}
+#education .education-degree{font-size:14px;font-weight:700;color:var(--ink);line-height:1.35}
+#education .education-meta{display:flex;justify-content:space-between;align-items:baseline;column-gap:12px;row-gap:3px;flex-wrap:wrap;margin-top:5px;font-size:13px;line-height:1.45}
+#education .education-date{font-size:12px;color:var(--muted);white-space:nowrap}
+#education .education-note{font-size:12px;line-height:1.55;color:var(--muted);margin:7px 0 0;text-align:left}
+</style>
 <link rel="me" href="https://orcid.org/0009-0003-3162-6700">
 </head>
 <body>
@@ -45,7 +52,22 @@ footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-s
 <div class="item"><p class="meta">2021 · KDI Policy Study Series 2021-08</p><p><a href="https://www.kdi.re.kr/research/reportView?pub_no=17396" target="_blank" rel="noopener"><em>Carbon Taxation Policy in Korea</em></a> (탄소세 도입 방안에 대한 연구). Yeochang Yoon. Acknowledged research assistance.</p></div>
 </section>
 </div><aside>
-<div class="aside-card" id="education"><h2>Education</h2><p><strong>PhD in Econometrics</strong><br>Korea University<br><span class="muted">Expected August 2027</span><br><span class="muted">Dissertation advisor: Professor Chirok Han (한치록), Department of Economics</span></p><p><strong>MA in Economics</strong><br>Korea University<br><span class="muted">2020</span></p><p><strong>Bachelor of Commerce</strong><br>Australian National University<br><span class="muted">2017 · Includes 2 years of military service in the Air Force</span></p></div>
+<div class="aside-card" id="education"><h2>Education</h2>
+<div class="education-entry">
+  <div class="education-degree">PhD in Econometrics</div>
+  <div class="education-meta"><span>Korea University</span><span class="education-date">Expected August 2027</span></div>
+  <p class="education-note">Dissertation advisor: Professor Chirok Han (한치록), Department of Economics</p>
+</div>
+<div class="education-entry">
+  <div class="education-degree">MA in Economics</div>
+  <div class="education-meta"><span>Korea University</span><span class="education-date">2020</span></div>
+</div>
+<div class="education-entry">
+  <div class="education-degree">Bachelor of Commerce</div>
+  <div class="education-meta"><span>Australian National University</span><span class="education-date">2017</span></div>
+  <p class="education-note">Includes 2 years of military service in the Air Force</p>
+</div>
+</div>
 <div class="aside-card" id="coursework"><h2>Graduate Coursework in Econometrics and Statistics</h2><p class="muted">13 graduate courses in econometrics, causal inference, machine learning, and statistics.</p><details class="coursework-details"><summary>View all 13 courses</summary><ul><li><strong>ECO518</strong> — Econometric Analysis</li>
 <li><strong>ECO707</strong> — Micro-Econometrics</li>
 <li><strong>ECO777</strong> — Panel Data Econometrics</li>
